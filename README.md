@@ -91,13 +91,13 @@ Analyses were conducted in R.
 
 ## Repository Structure
 
-R/
+#R#
 Contains all statistical analysis scripts.
 
-figures/
+#figures#
 Contains figures generated from the analysis pipeline.
 
-manuscript/
+#manuscript#
 Contains citation information and manuscript-related documentation.
 
 ---
