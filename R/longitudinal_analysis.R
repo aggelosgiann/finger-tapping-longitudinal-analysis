@@ -31,10 +31,10 @@ library(ggeffects)
 # 1. Unified Data Input & Reshaping
 # ==========================================
 
-# Load the new consolidated dataset
+# Load the dataset
 df_raw <- read.csv("datawithkeys.csv", stringsAsFactors = FALSE)
 
-# Pivot the wide dataset to a long format suitable for LMM
+# Pivot to a long format suitable for LMM
 # names_pattern "(.*)(\\d)$" grabs the base name and suffix separately
 df_long <- df_raw %>%
   pivot_longer(
@@ -62,7 +62,7 @@ df_clean <- df_long %>%
     MMSE = mmse
   ) %>%
   mutate(
-    # Set Baseline Status (Assuming 'mci' designates baseline: 0=NC, 1=MCI)
+    # Set Baseline Status ('mci' designates baseline: 0=NC, 1=MCI)
     Baseline_Status = factor(mci, levels = c(0, 1), labels = c("0", "1")),
     Outcome_Binary = ifelse(mci != 0, 1, 0),
     
