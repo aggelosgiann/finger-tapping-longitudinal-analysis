@@ -1,3 +1,7 @@
+# ==========================================
+# Prepare Libraries and Working Directory
+# ==========================================
+
 # Set working directory
 setwd("C:\\Users\\aggel\\Documents\\Data")
 
